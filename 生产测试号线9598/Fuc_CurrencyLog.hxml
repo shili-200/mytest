@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--File for ECCSView5.0-->
+<Items>
+  <Item Type="65537">
+    <PositionInfo x="-4140" y="-3310" z="1"/>
+    <InEdgeList/>
+    <OutEdgeList>
+      <Edge x="0" y="20" z="73"/>
+    </OutEdgeList>
+
+<Node Entrance="No" Fail="No" FormName="FlowStart-1" FormText="" Icon=":/ECCSResources/Images/Start.png" Name="FlowStart" Succ="Yes" SuccNext="VarDefine-10" Text="开始节点" Type="CallControl">
+
+  <Column Name="ParamName" Text="参数名"/>
+
+  <Column Name="ParamValue" Text="参数值"/>
+
+  <Column Name="Comment" Text="注释"/>
+
+  <Input Modify="no" Text="流程参数">
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="makefileext"/>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="vxml"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="生成文件的后缀"/>
+    </Row>
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="application"/>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="App.vxml"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="指定根文件"/>
+    </Row>
+  </Input>
+
+  <Output Modify="" Text=""/>
+
+</Node>
+</Item>
+  <Item Type="65537">
+    <PositionInfo x="-4140" y="-2680" z="9"/>
+    <InEdgeList>
+      <Edge x="0" y="-20" z="15"/>
+    </InEdgeList>
+    <OutEdgeList/>
+
+<Node Fail="No" FormName="SubFlowExport-9" FormText="" Icon=":/ECCSResources/Images/subOutput.png" Name="SubFlowExport" Succ="No" Text="子流导出参数" Type="ExpansionBusiness">
+
+  <Column Name="ParamName" Text="参数名"/>
+
+  <Column Name="ParamType" Text="参数类型"/>
+
+  <Column Name="ParamValue" Text="参数值"/>
+
+  <Column Name="Comment" Text="注释"/>
+
+  <Input Modify="yes" Text="输入参数">
+    <Row Modify="Yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="resultFlag1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="resultFlag"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+  </Input>
+
+  <Output Modify="no" Text="输出参数"/>
+
+</Node>
+</Item>
+  <Item Type="65537">
+    <PositionInfo x="-4140" y="-3240" z="10"/>
+    <InEdgeList>
+      <Edge x="0" y="-20" z="73"/>
+    </InEdgeList>
+    <OutEdgeList>
+      <Edge x="0" y="20" z="13"/>
+    </OutEdgeList>
+
+<Node Fail="No" FormName="VarDefine-10" FormText="" Icon=":/ECCSResources/Images/ab3.png" Name="VarDefine" Succ="Yes" SuccNext="SubFlowImport-12" Text="变量定义" Type="LogicBusiness">
+
+  <Column Name="ParamName" Text="变量名"/>
+
+  <Column Name="ParamType" Text="变量类型"/>
+
+  <Column Name="ParamValue" Text="变量初值"/>
+
+  <Column Name="Comment" Text="注释"/>
+
+  <Input Modify="yes" Text="输入参数">
+    <Row Modify="Yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="callId"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="callerNo"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="serviceNo"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="calleeNo"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="cityCode"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="userClass"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="operateTrace"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="enterDatetime"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="serviceStartTime"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="keyTrace"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="branchTrace"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="operateResult"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="touchId"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="categoryId"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="testFlag"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="transferFlag"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="subFlowName"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="ext1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="ext2"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="exitDatetime"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="serviceEndTime"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="touchSn"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="chargeLanguage"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="testFlag1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="CallID"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="CallerNo"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="ServiceNo"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="CalleeNo"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="CityCode"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="UserClass"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="DigitCode"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="datetime"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="字符型要加 ''"/>
+    </Row>
+  </Input>
+
+  <Output Modify="no" Text="输出参数"/>
+
+</Node>
+</Item>
+  <Item Type="65537">
+    <PositionInfo x="-4140" y="-3050" z="11"/>
+    <InEdgeList>
+      <Edge x="0" y="-20" z="99"/>
+    </InEdgeList>
+    <OutEdgeList>
+      <Edge x="0" y="20" z="100"/>
+    </OutEdgeList>
+
+<Node Fail="No" FormName="VarDefine-11" FormText="" Icon=":/ECCSResources/Images/ab3.png" Name="VarDefine" Succ="Yes" SuccNext="VarAssign-98" Text="变量定义" Type="LogicBusiness">
+
+  <Column Name="ParamName" Text="变量名"/>
+
+  <Column Name="ParamType" Text="变量类型"/>
+
+  <Column Name="ParamValue" Text="变量初值"/>
+
+  <Column Name="Comment" Text="注释"/>
+
+  <Input Modify="yes" Text="输入参数">
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="currTime"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="BaseGetDateTime()&#xA;"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="获取当前时间"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="partNo"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="字符型">
+        <Item Name="Int" Text="整型"/>
+        <Item Name="Float" Text="浮点型"/>
+        <Item Name="String" Text="字符型"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="BaseStrReplace(BaseStrSub(BaseGetDateTime(),5,5),'-','')"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="获取MMDD"/>
+    </Row>
+  </Input>
+
+  <Output Modify="no" Text="输出参数"/>
+
+</Node>
+</Item>
+  <Item Type="65537">
+    <PositionInfo x="-4140" y="-3180" z="12"/>
+    <InEdgeList>
+      <Edge x="0" y="-20" z="13"/>
+    </InEdgeList>
+    <OutEdgeList>
+      <Edge x="0" y="20" z="53"/>
+    </OutEdgeList>
+
+<Node Fail="No" FormName="SubFlowImport-12" FormText="" Icon=":/ECCSResources/Images/subInput.png" Name="SubFlowImport" Succ="Yes" SuccNext="Log-52" Text="子流导入参数" Type="ExpansionBusiness">
+
+  <Column Name="ParamName" Text="参数名"/>
+
+  <Column Name="ParamType" Text="参数类型"/>
+
+  <Column Name="ParamValue" Text="参数值"/>
+
+  <Column Name="Comment" Text="注释"/>
+
+  <Input Modify="yes" Text="输入参数">
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="sysCallID"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamType" Null="No" Text="变量"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamValue" Null="No" Text="ParamsysCallID"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="IVR的CallID"/>
+    </Row>
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="sysANI"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamType" Null="No" Text="变量"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamValue" Null="No" Text="ParamsysANI"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="主叫号码"/>
+    </Row>
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="sysDNIS"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamType" Null="No" Text="变量"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamValue" Null="No" Text="ParamsysDNIS"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="被叫号码"/>
+    </Row>
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="sysCallRefID"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamType" Null="No" Text="变量"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamValue" Null="No" Text="ParamsysCallRefID"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="内部参数"/>
+    </Row>
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="sysChannelID"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamType" Null="No" Text="变量"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamValue" Null="No" Text="ParamsysChannelID"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="通道ID"/>
+    </Row>
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="sysExtenNum"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamType" Null="No" Text="变量"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamValue" Null="No" Text="ParamsysExtenNum"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="分机号码"/>
+    </Row>
+    <Row Modify="Yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="callId"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="callId1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="callerNo"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="callerNo1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="serviceNo"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="serviceNo1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="calleeNo"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="calleeNo1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="operateTrace"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="operateTrace1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="enterDatetime"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="enterDatetime1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="serviceStartTime"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="serviceStartTime1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="keyTrace"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="keyTrace1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="branchTrace"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="branchTrace1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="operateResult"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="operateResult1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="subFlowName"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="subFlowName1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="ext1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="ext11"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="ext2"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="ext21"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="exitDatetime"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="exitDatetime1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="serviceEndTime"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="serviceEndTime1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="testFlag"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="testFlag1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+  </Input>
+
+  <Output Modify="no" Text="输出参数"/>
+
+</Node>
+</Item>
+  <Item Type="65538">
+    <PositionInfo x="0" y="0" z="13"/>
+    <ExitType type="2"/>
+    <SourceItem zValue="10"/>
+    <DestItem zValue="12"/>
+    <PointList>
+      <Point x="-4140" y="-3220"/>
+      <Point x="-4140" y="-3200"/>
+    </PointList>
+  </Item>
+  <Item Type="65537">
+    <PositionInfo x="-4140" y="-2750" z="14"/>
+    <InEdgeList>
+      <Edge x="0" y="-20" z="92"/>
+    </InEdgeList>
+    <OutEdgeList>
+      <Edge x="0" y="20" z="15"/>
+    </OutEdgeList>
+
+<Node Fail="No" FormName="VarAssign-14" FormText="" Icon=":/ECCSResources/Images/ab2.png" Name="VarAssign" Succ="Yes" SuccNext="SubFlowExport-9" Text="变量赋值" Type="LogicBusiness">
+
+  <Column Name="ParamName" Text="参数名"/>
+
+  <Column Name="ParamType" Text="参数类型"/>
+
+  <Column Name="ParamValue" Text="参数值"/>
+
+  <Column Name="Comment" Text="注释"/>
+
+  <Input Modify="yes" Text="输入参数">
+    <Row Modify="Yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="resultFlag"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="表达式">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="'0'"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+  </Input>
+
+  <Output Modify="no" Text="输出参数"/>
+
+</Node>
+</Item>
+  <Item Type="65538">
+    <PositionInfo x="0" y="0" z="15"/>
+    <ExitType type="2"/>
+    <SourceItem zValue="14"/>
+    <DestItem zValue="9"/>
+    <PointList>
+      <Point x="-4140" y="-2730"/>
+      <Point x="-4140" y="-2700"/>
+    </PointList>
+  </Item>
+  <Item Type="65537">
+    <PositionInfo x="-4140" y="-3120" z="52"/>
+    <InEdgeList>
+      <Edge x="0" y="-20" z="53"/>
+    </InEdgeList>
+    <OutEdgeList>
+      <Edge x="0" y="20" z="99"/>
+    </OutEdgeList>
+
+<Node Fail="No" FormName="Log-52" FormText="" Icon=":/ECCSResources/Images/log.png" Name="Log" Succ="Yes" SuccNext="VarDefine-11" Text="输出日志" Type="ExpansionBusiness">
+
+  <Column Name="ParamName" Text="参数名"/>
+
+  <Column Name="ParamType" Text="参数类型"/>
+
+  <Column Name="ParamValue" Text="参数值"/>
+
+  <Column Name="Comment" Text="注释"/>
+
+  <Input Modify="yes" Text="输入参数">
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="Log"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="表达式">
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="'****************new_Fuc_CurrencyLog**************'"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="serviceStartTime"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="serviceStartTime"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+  </Input>
+
+  <Output Modify="no" Text="输出参数"/>
+
+</Node>
+</Item>
+  <Item Type="65538">
+    <PositionInfo x="0" y="0" z="53"/>
+    <ExitType type="2"/>
+    <SourceItem zValue="12"/>
+    <DestItem zValue="52"/>
+    <PointList>
+      <Point x="-4140" y="-3160"/>
+      <Point x="-4140" y="-3140"/>
+    </PointList>
+  </Item>
+  <Item Type="65538">
+    <PositionInfo x="0" y="0" z="73"/>
+    <ExitType type="2"/>
+    <SourceItem zValue="1"/>
+    <DestItem zValue="10"/>
+    <PointList>
+      <Point x="-4140" y="-3290"/>
+      <Point x="-4140" y="-3260"/>
+    </PointList>
+  </Item>
+  <Item Type="65537">
+    <PositionInfo x="-3500" y="-3280" z="75"/>
+    <InEdgeList/>
+    <OutEdgeList>
+      <Edge x="0" y="20" z="78"/>
+    </OutEdgeList>
+
+<Node Entrance="No" Fail="No" FormName="CatchHangup-75" FormText="挂机日志" Icon=":/ECCSResources/Images/catch.png" Name="CatchHangup" Succ="Yes" SuccNext="SubFlow-77" Text="挂机流程" Type="LogicBusiness">
+
+  <Column Name="ParamName" Text="参数名"/>
+
+  <Column Name="ParamType" Text="参数类型"/>
+
+  <Column Name="ParamValue" Text="参数值"/>
+
+  <Column Name="Comment" Text="注释"/>
+
+  <Input Modify="no" OperType="Both|挂机;Custom|客户挂机;Platform|平台挂机" Text="输入参数" Val="Both"/>
+
+  <Output Modify="no" Text="输出参数"/>
+
+</Node>
+</Item>
+  <Item Type="65537">
+    <PositionInfo x="-3500" y="-3100" z="76"/>
+    <InEdgeList>
+      <Edge x="0" y="-20" z="80"/>
+      <Edge x="0" y="-20" z="81"/>
+    </InEdgeList>
+    <OutEdgeList/>
+
+<Node Fail="No" FormName="Exit-76" FormText="" Icon=":/ECCSResources/Images/exit.png" Name="Exit" Succ="No" Text="退出流程" Type="LogicBusiness">
+
+  <Input Modify="no" Text="输入参数"/>
+
+  <Output Modify="no" Text="输出参数"/>
+
+</Node>
+</Item>
+  <Item Type="65537">
+    <PositionInfo x="-3500" y="-3200" z="77"/>
+    <InEdgeList>
+      <Edge x="0" y="-20" z="78"/>
+    </InEdgeList>
+    <OutEdgeList>
+      <Edge x="0" y="20" z="80"/>
+      <Edge x="20" y="0" z="81"/>
+    </OutEdgeList>
+
+<Node Fail="Yes" FailNext="Exit-76" FormName="SubFlow-77" FormText="挂机日志" Icon=":/ECCSResources/Images/sub.png" Name="SubFlow" Succ="Yes" SuccNext="Exit-76" Text="子流程调用" Type="ExpansionBusiness">
+
+  <Column Name="ParamName" Text="参数名"/>
+
+  <Column Name="ParamType" Text="参数类型"/>
+
+  <Column Name="ParamValue" Text="参数值"/>
+
+  <Column Name="Comment" Text="注释"/>
+
+  <Input Modify="yes" Text="输入参数">
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="SubFlowName"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="表达式">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="'Fuc_CurrencyLog.vxml'"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="子流程名字"/>
+    </Row>
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="ParamsysCallID"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamType" Null="No" Text="变量"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamValue" Null="No" Text="sysCallID"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="IVR的CallID"/>
+    </Row>
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="ParamsysANI"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamType" Null="No" Text="变量"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamValue" Null="No" Text="sysANI"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="主叫号码"/>
+    </Row>
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="ParamsysDNIS"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamType" Null="No" Text="变量"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamValue" Null="No" Text="sysDNIS"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="被叫号码"/>
+    </Row>
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="ParamsysCallRefID"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamType" Null="No" Text="变量"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamValue" Null="No" Text="sysCallRefID"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="内部参数"/>
+    </Row>
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="ParamsysChannelID"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamType" Null="No" Text="变量"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamValue" Null="No" Text="sysChannelID"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="通道ID"/>
+    </Row>
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="false" Name="ParamName" Null="No" Text="ParamsysExtenNum"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamType" Null="No" Text="变量"/>
+      <Grid Control="LineEdit" Editable="false" Name="ParamValue" Null="No" Text="sysExtenNum"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="分机号码"/>
+    </Row>
+    <Row Modify="Yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="callId1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="CallID"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="CallID"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="callerNo1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="CallerNo"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="主叫"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="serviceNo1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="ServiceNo"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="服务号码"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="calleeNo1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="CalleeNo"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="被叫号码"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="enterDatetime1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="EnterDateTime"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="进入流程时间"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="serviceStartTime1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="BaseGetDateTime()"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="业务开始办理时间"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="keyTrace1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="KeyTrace"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="按键轨迹"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="branchTrace1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="BranchTrace"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="分支轨迹"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="operateResult1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="70"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="操作结果"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="subFlowName1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="subFlowNameN1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="子业务流程名"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="ext11"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="ext1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="ext21"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="ext2"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="operateTrace1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="变量">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="DigitCode"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="层次按键(DigitCode)"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="exitDatetime1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="表达式">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="BaseGetDateTime()"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="时间"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="serviceEndTime1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="表达式">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="时间"/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="testFlag1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="表达式">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="testFlag"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="时间"/>
+    </Row>
+  </Input>
+
+  <Output Modify="yes" Text="输出参数">
+    <Row Modify="Yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="resultFlag1"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="常量">
+        <Item Name="Const" Text="常量"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="resultFlag1"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+  </Output>
+
+</Node>
+</Item>
+  <Item Type="65538">
+    <PositionInfo x="0" y="0" z="78"/>
+    <ExitType type="2"/>
+    <SourceItem zValue="75"/>
+    <DestItem zValue="77"/>
+    <PointList>
+      <Point x="-3500" y="-3260"/>
+      <Point x="-3500" y="-3220"/>
+    </PointList>
+  </Item>
+  <Item Type="65539">
+    <ParentItem zValue="77"/>
+    <PositionInfo x="38.1822" y="-17.0496" z="79"/>
+    <Font Family="SimSun" Size="16" Bold="0" Italic="0" UnderLine="0"/>
+    <Text String="挂机日志"/>
+  </Item>
+  <Item Type="65538">
+    <PositionInfo x="0" y="0" z="80"/>
+    <ExitType type="2"/>
+    <SourceItem zValue="77"/>
+    <DestItem zValue="76"/>
+    <PointList>
+      <Point x="-3500" y="-3180"/>
+      <Point x="-3500" y="-3120"/>
+    </PointList>
+  </Item>
+  <Item Type="65538">
+    <PositionInfo x="0" y="0" z="81"/>
+    <ExitType type="3"/>
+    <SourceItem zValue="77"/>
+    <DestItem zValue="76"/>
+    <PointList>
+      <Point x="-3480" y="-3200"/>
+      <Point x="-3500" y="-3120"/>
+    </PointList>
+  </Item>
+  <Item Type="65537">
+    <PositionInfo x="-4140" y="-2830" z="82"/>
+    <InEdgeList>
+      <Edge x="0" y="-20" z="96"/>
+    </InEdgeList>
+    <OutEdgeList>
+      <Edge x="0" y="20" z="92"/>
+    </OutEdgeList>
+
+<Node Fail="No" FormName="Log-82" FormText="记录按键轨迹日志" Icon=":/ECCSResources/Images/log.png" Name="Log" Succ="Yes" SuccNext="VarAssign-14" Text="输出日志" Type="ExpansionBusiness">
+
+  <Column Name="ParamName" Text="参数名"/>
+
+  <Column Name="ParamType" Text="参数类型"/>
+
+  <Column Name="ParamValue" Text="参数值"/>
+
+  <Column Name="Comment" Text="注释"/>
+
+  <Input Modify="yes" Text="输入参数">
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="Log_AutoKeyTraceLog"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="表达式">
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="'T_SCE_AUTOKEYTRACELOG','+currTime+','+partNo+','+callId+','+callerNo+','+serviceNo+','+calleeNo+','+operateTrace+','+operateResult+','+serviceStartTime+','+keyTrace+','+branchTrace+','+serviceEndTime+',1,,,'+subFlowName+',,,,,,,,,,,,,'+testFlag+''"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+  </Input>
+
+  <Output Modify="no" Text="输出参数"/>
+
+</Node>
+</Item>
+  <Item Type="65538">
+    <PositionInfo x="0" y="0" z="92"/>
+    <ExitType type="2"/>
+    <SourceItem zValue="82"/>
+    <DestItem zValue="14"/>
+    <PointList>
+      <Point x="-4140" y="-2810"/>
+      <Point x="-4140" y="-2770"/>
+    </PointList>
+  </Item>
+  <Item Type="65539">
+    <ParentItem zValue="82"/>
+    <PositionInfo x="-2" y="-41" z="93"/>
+    <Font Family="SimSun" Size="16" Bold="0" Italic="0" UnderLine="0"/>
+    <Text String="记录按键轨迹日志"/>
+  </Item>
+  <Item Type="65537">
+    <PositionInfo x="-4140" y="-2900" z="94"/>
+    <InEdgeList>
+      <Edge x="0" y="-20" z="101"/>
+    </InEdgeList>
+    <OutEdgeList>
+      <Edge x="0" y="20" z="96"/>
+    </OutEdgeList>
+
+<Node Fail="No" FormName="Log-94" FormText="记录按键轨迹日志" Icon=":/ECCSResources/Images/log.png" Name="Log" Succ="Yes" SuccNext="Log-82" Text="输出日志" Type="ExpansionBusiness">
+
+  <Column Name="ParamName" Text="参数名"/>
+
+  <Column Name="ParamType" Text="参数类型"/>
+
+  <Column Name="ParamValue" Text="参数值"/>
+
+  <Column Name="Comment" Text="注释"/>
+
+  <Input Modify="yes" Text="输入参数">
+    <Row Modify="No">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="LOG_"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="表达式">
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="Yes" Text="callId+'打印按键轨迹日志'"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+  </Input>
+
+  <Output Modify="no" Text="输出参数"/>
+
+</Node>
+</Item>
+  <Item Type="65538">
+    <PositionInfo x="0" y="0" z="96"/>
+    <ExitType type="2"/>
+    <SourceItem zValue="94"/>
+    <DestItem zValue="82"/>
+    <PointList>
+      <Point x="-4140" y="-2880"/>
+      <Point x="-4140" y="-2850"/>
+    </PointList>
+  </Item>
+  <Item Type="65537">
+    <PositionInfo x="-4140" y="-2970" z="98"/>
+    <InEdgeList>
+      <Edge x="0" y="-20" z="100"/>
+    </InEdgeList>
+    <OutEdgeList>
+      <Edge x="0" y="20" z="101"/>
+    </OutEdgeList>
+
+<Node Fail="No" FormName="VarAssign-98" FormText="" Icon=":/ECCSResources/Images/ab2.png" Name="VarAssign" Succ="Yes" SuccNext="Log-94" Text="变量赋值" Type="LogicBusiness">
+
+  <Column Name="ParamName" Text="参数名"/>
+
+  <Column Name="ParamType" Text="参数类型"/>
+
+  <Column Name="ParamValue" Text="参数值"/>
+
+  <Column Name="Comment" Text="注释"/>
+
+  <Input Modify="yes" Text="输入参数">
+    <Row Modify="Yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="testFlag"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="表达式">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="'0'"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text=""/>
+    </Row>
+    <Row Modify="yes">
+      <Grid Control="LineEdit" Editable="true" Name="ParamName" Null="No" Text="serviceEndTime"/>
+      <Grid Control="ComboBox" Editable="true" Name="ParamType" Null="No" Text="表达式">
+        <Item Name="Const" Text="常量"/>
+        <Item Name="Var" Text="变量"/>
+        <Item Name="Expr" Text="表达式"/>
+      </Grid>
+      <Grid Control="LineEdit" Editable="true" Name="ParamValue" Null="No" Text="BaseGetDateTime()&#xA;"/>
+      <Grid Control="LineEdit" Editable="true" Name="Comment" Null="Yes" Text="获取时间"/>
+    </Row>
+  </Input>
+
+  <Output Modify="no" Text="输出参数"/>
+
+</Node>
+</Item>
+  <Item Type="65538">
+    <PositionInfo x="0" y="0" z="99"/>
+    <ExitType type="2"/>
+    <SourceItem zValue="52"/>
+    <DestItem zValue="11"/>
+    <PointList>
+      <Point x="-4140" y="-3100"/>
+      <Point x="-4140" y="-3070"/>
+    </PointList>
+  </Item>
+  <Item Type="65538">
+    <PositionInfo x="0" y="0" z="100"/>
+    <ExitType type="2"/>
+    <SourceItem zValue="11"/>
+    <DestItem zValue="98"/>
+    <PointList>
+      <Point x="-4140" y="-3030"/>
+      <Point x="-4140" y="-2990"/>
+    </PointList>
+  </Item>
+  <Item Type="65538">
+    <PositionInfo x="0" y="0" z="101"/>
+    <ExitType type="2"/>
+    <SourceItem zValue="98"/>
+    <DestItem zValue="94"/>
+    <PointList>
+      <Point x="-4140" y="-2950"/>
+      <Point x="-4140" y="-2920"/>
+    </PointList>
+  </Item>
+</Items>
